@@ -3,8 +3,6 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-
-
 from core import create_app, db
 from core.models.assignments import Assignment
 from sqlalchemy import update

@@ -10,7 +10,7 @@ from werkzeug.exceptions import HTTPException
 
 from sqlalchemy.exc import IntegrityError
 
-app = create_app()
+app = create_app() # calling the create app from the main folder 
 
 app.register_blueprint(student_assignments_resources, url_prefix='/student')
 app.register_blueprint(teacher_assignments_resources, url_prefix='/teacher')
@@ -25,7 +25,8 @@ def home():
     return jsonify(message="App is running"), 200
 
 
-
+# this is the execption handler if there is a error  then it would be returned 
+# depending upon type of error  HTTP exception or Validation error
 @app.errorhandler(Exception)
 def handle_error(err):
     if isinstance(err, FyleError):
