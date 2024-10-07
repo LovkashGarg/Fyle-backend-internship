@@ -1,0 +1,1 @@
+print(" script would be written in this file also ")
